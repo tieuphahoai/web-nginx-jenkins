@@ -37,7 +37,7 @@ pipeline {
                         "chat_id": "'$TELEGRAM_CHAT_ID'", 
                         "text": "✅✅✅Build SUCCESS\nJob name: '${currentBuild.fullDisplayName}'\nJob url: '${env.BUILD_URL}'", 
                         "disable_notification": false
-                    }' https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage
+                    }' https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage
                     '''
                 }
             }
@@ -50,7 +50,7 @@ pipeline {
                         "chat_id": "'$TELEGRAM_CHAT_ID'", 
                         "text": "❌❌❌Build FAILED\nJob name: '${currentBuild.fullDisplayName}'\nJob url: '${env.BUILD_URL}'", 
                         "disable_notification": false
-                    }' https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage
+                    }' https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage
                     '''
                 }
             }
